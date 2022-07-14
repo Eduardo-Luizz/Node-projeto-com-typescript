@@ -10,7 +10,7 @@ class CreateCourseService {
     //   console.log(data.name, data.duration, data.educator);
     // }
     // Outra forma de fazer
-    execute({ duration, educator, name }) {
+    execute({ duration = 8, educator, name }) {
         console.log(name, duration, educator);
     }
 }
