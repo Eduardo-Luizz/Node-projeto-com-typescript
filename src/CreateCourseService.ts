@@ -7,7 +7,7 @@
 
 interface Course {
   name: string;
-  duration: number; 
+  duration?: number; // Atributo opcional
   educator: string;
 }
 
@@ -18,7 +18,7 @@ class CreateCourseService {
   // }
 
   // Outra forma de fazer
-  execute({ duration, educator, name }: Course) {
+  execute({ duration = 8, educator, name }: Course) { // Definindo o valor default
     console.log(name, duration, educator);
   }
 }
